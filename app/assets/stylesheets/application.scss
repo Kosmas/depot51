@@ -110,3 +110,43 @@ body, body > p, body > ol, body > ul, body > td {margin: 8px !important}
     display: none;
   }
 }
+
+.depot_form {
+  fieldset {
+    background: #efe;
+
+    legend {
+      color: #dfd;
+      background: #141;
+      font-family: sans-serif;
+      padding: 0.2em 1em;
+    }
+
+    div {
+      margin-bottom: 0.3em;
+    }
+  }
+
+  form {
+    label {
+      width: 10em;
+      float: left;
+      text-align: right;
+      padding-top: 0.2em;
+      margin-right: 0.1em;
+      display: block;
+    }
+
+    select, textarea, input {
+      margin-left: 0.5em;
+    }
+
+    .actions {
+      margin-left: 10em;
+    }
+
+    br {
+      display: none;
+    }
+  }
+}
