@@ -14,139 +14,68 @@
  *= require_self
  */
 
-body, body > p, body > ol, body > ul, body > td {margin: 8px !important}
-
-#banner {
-  position: relative;
-  min-height: 40px;
-  background: #9c9;
-  padding: 10px;
-  border-bottom: 2px solid;
-  font: small-caps 40px/40px "Times New Roman", serif;
-  color: #282;
-  text-align: center;
-
-  img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 192px;
+body {
+  margin: 0;
+  padding: 0;
+}
+header.main {
+  text-align: center;  // center on mobile
+  @media (min-width: 30em) {
+    text-align: left;  // left align on desktop
+  }
+  background: #282;
+  margin: 0;
+  h1 {
+    display: none;
   }
 }
+.content {
+  margin: 0;
+  padding: 0;
 
-#notice {
-  color: #000 !important;
-  border: 2px solid red;
-  padding: 1em;
-  margin-bottom: 2em;
-  background-color: #f0f0f0;
-  font: bold smaller sans-serif;
-}
-
-#notice:empty {
-  display: none;
-}
-
-#columns {
-  background: #141;
   display: flex;
+  display: -webkit-flex;
+  flex-direction: column;  // mobile is horizontally laid out
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
 
-  #main {
-    padding: 1em;
-    background: white;
-    flex: 1;
+  @media (min-width: 30em) {
+    flex-direction: row;  // desktop is vertically laid out
+    -webkit-box-orient: horizontal;
   }
 
-  #side {
-    padding: 1em 2em;
+  nav {
+    padding-bottom: 1em;
     background: #141;
-
-    form, div {
-      display: inline;
+    text-align: center;  // mobile has centered nav
+    @media (min-width: 30em) {
+      text-align: left;  // desktop nav is left-aligned
+      padding: 1em;      // and needs more padding
     }
-
-    input {
-      font-size: small;
-    }
-
-    #cart {
-      font-size:  smaller;
-      color:      white;
-
-      table {
-        border-top:     1px dotted #595;
-        border-bottom:  1px dotted #595;
-        margin-bottom:  10px;
-      }
-    }
-
     ul {
+      list-style: none;
+      margin: 0;
       padding: 0;
-
+      @media (min-width: 30em) {
+        padding-right: 1em;  // give desktop some extra space
+      }
       li {
-        list-style: none;
-
+        margin: 0;
+        padding: 0.5em;
+        text-transform: uppercase;
+        letter-spacing: 0.354em;
         a {
           color: #bfb;
-          font-size: small;
+          text-decoration: none;
+        }
+        a:hover {
+          background: none;
+          color: white;
         }
       }
     }
   }
-}
-
-@media all and (max-width: 800px) {
-  #columns {
-    flex-direction: column-reverse;
-  }
-}
-
-@media all and (max-width: 500px) {
-  #banner {
-    height: 1em;
-  }
-
-  #banner .title {
-    display: none;
-  }
-}
-
-.depot_form {
-  fieldset {
-    background: #efe;
-
-    legend {
-      color: #dfd;
-      background: #141;
-      font-family: sans-serif;
-      padding: 0.2em 1em;
-    }
-
-    div {
-      margin-bottom: 0.3em;
-    }
-  }
-
-  form {
-    label {
-      width: 10em;
-      float: left;
-      text-align: right;
-      padding-top: 0.2em;
-      margin-right: 0.1em;
-      display: block;
-    }
-
-    select, textarea, input {
-      margin-left: 0.5em;
-    }
-
-    .actions {
-      margin-left: 10em;
-    }
-
-    br {
-      display: none;
-    }
+  main {
+    padding: 0.5em;
   }
 }
