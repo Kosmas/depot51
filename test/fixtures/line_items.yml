@@ -6,4 +6,4 @@ one:
 
 two:
   product: ruby
-  order_id: 1
+  cart: two
