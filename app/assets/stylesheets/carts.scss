@@ -2,13 +2,44 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.carts, #side #cart{
-  .item_price, .total_line {
+.carts {
+  table {
+    border-collapse: collapse;
+  }
+  td {
+    padding: 0.5em;
+  }
+  td.quantity {
+    white-space: nowrap;
+  }
+  td.quantity::after {
+    content: " x";
+  }
+  td.price {
+    font-weight: bold;
     text-align: right;
   }
-
-  .total_line .total_cell {
-    font-weight: bold;
-    border-top: 1px solid #595;
+  tfoot {
+    th, td.price {
+      font-weight: bold;
+      padding-top: 1em;
+    }
+    th {
+      text-align: right;
+    }
+    td.price {
+      border-top: solid thin;
+    }
+  }
+  input[type="submit"] {
+    background-color: #881;
+    border-radius: 0.354em;
+    border: solid thin #441;
+    color: white;
+    font-size: 1em;
+    padding: 0.354em 1em;
+  }
+  input[type="submit"]:hover {
+    background-color: #992;
   }
 }
