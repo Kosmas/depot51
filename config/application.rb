@@ -14,5 +14,8 @@ module Depot51
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+
+    # Never log credit card numbers
+    config.filter_parameters += [ :credit_card_number ]
   end
 end
