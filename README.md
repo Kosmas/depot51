@@ -2,7 +2,7 @@
 
 Agile Web Development with Rails 5.1 - Pragmatic Programmers
 
-
+<p>B8.0 2017-10-18</p>
 <p>B7.0 2017-09-12</p>
 <p>B6.0 2017-08-21</p>
 <p>B5.0 2017-07-21</p>
