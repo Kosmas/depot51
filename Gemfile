@@ -58,4 +58,5 @@ gem 'jquery-ui-rails'
 
 gem 'webpacker', '~> 3.0.2'
 gem 'activemodel-serializers-xml'
+gem 'i18n-js'
 

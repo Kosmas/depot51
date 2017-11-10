@@ -17,5 +17,7 @@ module Depot51
 
     # Never log credit card numbers
     config.filter_parameters += [ :credit_card_number ]
+
+    config.middleware.use I18n::JS::Middleware
   end
 end
